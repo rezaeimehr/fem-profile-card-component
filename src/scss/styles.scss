@@ -1,0 +1,140 @@
+@import 'colors.scss';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background-color: $dark-cyan;
+  background-image: url('../../images/bg-pattern-top.svg'),
+    url('../../images/bg-pattern-bottom.svg');
+  background-repeat: no-repeat;
+  background-position: right 41vw bottom 43vh, left 41vw top 43vh;
+  height: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+
+.card {
+  width: 325px;
+  height: 374px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 35px 75px rgba(0, 0, 0, 0.2);
+
+  &__top {
+    background: url('../../images/bg-pattern-card.svg') center/cover no-repeat;
+    height: 140px;
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  &__middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #96969640;
+
+    img {
+      width: 105px;
+      border-radius: 70px;
+      margin-top: -53px;
+      border: 5px solid white;
+    }
+  }
+
+  &__person {
+    font-size: 18px;
+    margin-top: 20px;
+    color: $dark-grayish-blue;
+
+    b {
+      margin-right: 4px;
+      color: $very-dark-desaturated-blue;
+    }
+  }
+
+  &__city {
+    font-size: 14px;
+    margin-top: 8px;
+
+    color: $dark-grayish-blue;
+  }
+
+  &__bottom {
+    padding: 24px 20px 16px 20px;
+    display: flex;
+
+    div {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      b {
+        font-size: 18px;
+        color: $very-dark-desaturated-blue;
+      }
+
+      span {
+        font-size: 9.3px;
+        margin-top: 5px;
+        letter-spacing: 1.4px;
+        color: $dark-gray;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-position: right 51.75vw bottom 35.4vh, left 48.1vw top 52.1vh;
+  }
+
+  .card {
+    width: 350px;
+
+    &__person {
+      font-size: 18.5px;
+    }
+
+    &__followers {
+      span {
+        padding-left: 7px;
+        letter-spacing: 1.5px;
+      }
+
+      b {
+        padding-left: 10px;
+      }
+    }
+
+    &__photos {
+      span {
+        padding-right: 10px;
+      }
+
+      b {
+        padding-right: 8px;
+      }
+    }
+  }
+}

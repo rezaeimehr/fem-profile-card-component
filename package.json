@@ -1,0 +1,16 @@
+{
+  "name": "fem-profile-card-component-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Profile card component coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass src/scss/styles.scss -o dist/css/ --recursive",
+    "dev": "node-sass -w src/scss/styles.scss -o dist/css/ --recursive"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
